@@ -5,7 +5,7 @@ import json
 import os
 
 def prepare_predictor(model_name ='TF5_cond'):
-    if model_name =='TF_cond':
+    if model_name =='TF5_cond':
         model = T5ForConditionalGeneration.from_pretrained("t5-large")
         tokenizer = T5Tokenizer.from_pretrained("t5-large")
 
@@ -31,7 +31,7 @@ def generate_notes(article,model, tokenizer,token_n_per_iter = 2000, max_length_
     for i in model_name_lis:
         if i == '(':
             break
-        st = st + i
+        model_name = model_name + i
 
     while current_index <article_length:
         inputs = tokenizer.encode("summarize: " + article[current_index:current_index+token_n_per_iter], return_tensors="pt", max_length=512,truncation=True)
