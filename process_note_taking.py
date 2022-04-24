@@ -24,7 +24,7 @@ def generate_notes(article,model, tokenizer,token_n_per_iter = 2000, max_length_
     article_length = len(article)
     current_index = 0
     note=1
-    notes = article_length// token_n_per_iter
+    notes = article_length// token_n_per_iter+1
     print('number_of_notes--------->' + str(notes))
     model_name_lis = list(str(model))
     model_name = ''
@@ -39,15 +39,15 @@ def generate_notes(article,model, tokenizer,token_n_per_iter = 2000, max_length_
             length_penalty=length_penalty_val,num_beams=7,early_stopping=True)
         outputs = tokenizer.decode(outputs[0])
         current_index = current_index+token_n_per_iter
-        note +=1
         if not os.path.isdir('notes_from_article/' +file_name + '/' + model_name):
             os.mkdir('notes_from_article/' + file_name + '/' + model_name)
 
-        path = 'notes_from_article/' + file_name + '/' + model_name+'/'+note+' '+ str(current_index)
-        os.mkdir(path)
-        with open(path, 'w') as fp:
-            json.dump(article, fp)
-        print('note_saved')
+        path = 'notes_from_article/' + file_name + '/' + model_name+'/'+str(note)+'_'+ str(current_index)
+        with open('notes_from_article/' + file_name + '/' + model_name +'/' + str(note)+'_'+ str(current_index) +'json', 'w') as fp:
+            json.dump(outputs, fp)
+        print('note_saved----------->' +str(note))
+        note +=1
+
 
 
 
