@@ -1,0 +1,1 @@
+"<pad> in this case<unk> nwe found 5 negative samples to work slightly better than 10<unk> n<unk> n<unk> n<unk> nTable 4: F1 score on NER task with 50d vectors.<unk> n<unk> nDiscrete is the baseline without word vectors.<unk> nSVD 90.8 85.7 77.3 73.7<unk> nSVD-L 90.5 84.8 73.6 71.5<unk> nHPCA 92.6 88.7 81.7 80.7<unk> nHSMN 90.5 85.7 78.7 74.7<unk> n<unk> nnnnna</s>"

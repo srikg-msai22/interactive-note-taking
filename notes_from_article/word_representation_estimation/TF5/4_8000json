@@ -1,0 +1,1 @@
+"<pad> in this paper, we focus on distributed representations of words learned by neural networks. neural networks perform significantly better than LSA for preserving linear regularities among words. the test set is available at www.fit.vutbr.cz/ <unk> u0303imikolov/rnnlm/word-test.v1.txt<unk> n2 http://www.fit.vutbr.cz/ <unk> u0303imikolov/rnnlm/word- a a </s>"
