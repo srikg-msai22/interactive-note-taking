@@ -1,0 +1,1 @@
+"<pad> ts in a large number of out of vocabulary (OoV) tokens. all experiments use a three-layer LSTM model with 1150units in the hidden layer and an embedding of size 400. for training the models, we use the NT-ASGD algorithm for 750epochs with Lequivalent to one epoch and n = 5. aftercomple-tion, we run ASGD with T = 0 and hot-started w0 -<extra_id_27> a<extra_id_27> a</s>"

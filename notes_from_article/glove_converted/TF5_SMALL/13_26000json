@@ -1,0 +1,1 @@
+"<pad> <unk> u201cAthens is to Greece as Berlin is to?<unk> u201d. <unk> u201cdance is to dancing as fly is to?<unk> u201d. a model should uniquely identify the missing term, with only an exact correspondence counted as a correct match. <unk> u201ca is to b as c is to?<unk> u201d; <unk> u201ca is to b as c is to?<unk> u201d;... </s>"

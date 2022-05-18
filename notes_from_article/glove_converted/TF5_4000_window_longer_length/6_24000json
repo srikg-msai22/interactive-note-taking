@@ -1,0 +1,1 @@
+"<pad> the number of co-occurrences of word i with word j, Xi j, can be modeled as a power-law<unk> n<unk> nwhere P<unk> u02c6i j = Xi j and Q<unk> u02c6i j = exp(wT w<unk> u02dc j ) are the unnormalized distributions.<unk> nri j often takes very<unk> nlarge values, which can complicate the optimiza- tion.<unk> n<unk> na</s>"
