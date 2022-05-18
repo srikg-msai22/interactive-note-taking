@@ -15,5 +15,6 @@ def save_json(article_name, st):
 
 
 if __name__=='__main__':
-    st = extract_clean_pdf('/Users/aleksandrsimonyan/Desktop/07.pdf')
-    save_json('regularization', st)
+    name = 'dropout'
+    st = extract_clean_pdf('/Users/aleksandrsimonyan/Desktop/' + name +'.pdf')
+    save_json(name, st)

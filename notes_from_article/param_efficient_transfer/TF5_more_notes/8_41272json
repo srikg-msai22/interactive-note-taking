@@ -1,0 +1,1 @@
+"<pad> PALs are small layers with a similar role to ouradapters. PALs perform mul-titask training, jointly fine-tuning BERT on all GLUE tasks. our bottleneckadapters and PALs are compared on squad v2.0 (Ra-jpurkar et al., 2018) PALs perform mul-titask training, jointly fine-tuning BERT on all GLUE tasks. PALs are not a - a</s>"

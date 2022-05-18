@@ -1,0 +1,1 @@
+"<pad> convolutional nets with dropout achieve a test error of about 16%. a 6-layer net gives a phone error rate of 23.4%. dropout furtherimproves it to 21.8%. a 4-layer net pretrained with a stack of RBMs get a phone error rate of 22.7%. with dropout this reduces to 19.7%. a 6-layer net gives a phone error rate of 23.4%. dropout furtherimproves it to 21.8%... </s>"

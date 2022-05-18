@@ -1,0 +1,1 @@
+"<pad> em-pirically, large batch sizes (e.g., 40-80) performed better than smaller sizes (e.g., 10-20) for NT-ASGD. we use a random BPTT length which is N (70, 5) with proba-bility 0.95 and N (35, 5) with probability 0.05. our vanilla LSTMmodel beats the state-of-the-art by approximately 1 unit on PTB and 0.1 units on WT2.<extra_id_27>.. </s>"

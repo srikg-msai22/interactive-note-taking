@@ -1,0 +1,1 @@
+"<pad> Parameter-Efficient Transfer Learning for NLPParameter search space) fine-tune input embedding module <unk> True, False<unk> 3) lowercase text <unk> True, False<unk> 4) remove non alphanumeric text <unk> True, False<unk> 5) use convolution <unk> True, False<unk> 6) convolution activation <unk> relu, relu6, leaky relu, swish, sigmoid, tanh<unk> 7).. a</s>"

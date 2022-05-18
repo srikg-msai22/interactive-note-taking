@@ -1,0 +1,1 @@
+"<pad> the LSTM is within 0.5 BLEU points of the bestwmt\u201914 result if it is used to rescore the 1000-best list of thebaseline system. the LSTM does well on long sentences, which is shown quantitatively in figure 3. the LSTM is able to turn a sequence of words into a vector of fixed dimensionality. the LSTM is not yet able to handle out-of-vocabulary words, but it.. a</s>"
