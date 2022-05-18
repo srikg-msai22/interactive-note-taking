@@ -46,8 +46,16 @@ def load_dataset(dataset_name):
             return data
 
 
-def generate_notes(article,model, tokenizer,token_n_per_iter = 2000, max_length_val=400, min_length_val= 200, length_penalty_val= 2.0, return_tensors="pt", file_name ='recurrent_neural_network'):
+def generate_notes(article,model, tokenizer,token_n_per_iter = 2000, max_length_val=400, min_length_val= 200, length_penalty_val= 2.0, return_tensors="pt", file_name ='recurrent_neural_network', smart_iterator = False, num_articles = 10):
+
+
+
     article_length = len(article)
+    print('article_length----->'+ str(article_length))
+    if smart_iterator == True:
+        token_n_per_iter = article_length //num_articles
+        print('token----->' + str(token_n_per_iter))
+
     current_index = 0
     note=1
     notes = article_length// token_n_per_iter+1
@@ -59,7 +67,7 @@ def generate_notes(article,model, tokenizer,token_n_per_iter = 2000, max_length_
             break
         model_name = model_name + i
 
-    model_name = 'TF5_BASEr'
+    model_name = 'TF5_more_notes'
 
 
     while current_index <article_length:
@@ -88,12 +96,11 @@ def generate_notes(article,model, tokenizer,token_n_per_iter = 2000, max_length_
 
 
 if __name__=='__main__':
-    name= 'recurrent_neural_network_based_language_model'
+    name= 'regularization'
     data = load_dataset(name+ '.json')
     model, tokenizer= prepare_predictor(model_name ='TF5_cond')
-    generate_notes(data, model, tokenizer, token_n_per_iter=2000, max_length_val=360, min_length_val=120,
+    generate_notes(data, model, tokenizer, token_n_per_iter=4000, max_length_val=360, min_length_val=120,
                    length_penalty_val=2.0, return_tensors="pt", file_name=name)
-    print(data)
 
 
 
