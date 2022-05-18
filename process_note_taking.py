@@ -1,6 +1,6 @@
 import argparse
 
-from transformers import T5ForConditionalGeneration,TransfoXLConfig, TransfoXLModel, T5Tokenizer,XLNetConfig,XLNetModel, MT5Model, XLNetTokenizer, XLMModel
+from transformers import T5ForConditionalGeneration, T5Tokenizer#,TransfoXLConfig, TransfoXLModel,,XLNetConfig,XLNetModel, MT5Model, XLNetTokenizer, XLMModel
 import json
 import os
 import time
@@ -59,12 +59,12 @@ def generate_notes(article,model, tokenizer,token_n_per_iter = 2000, max_length_
             break
         model_name = model_name + i
 
-    model_name = 'TF5_longer'
+    model_name = 'TF5_BASEr'
 
 
     while current_index <article_length:
         current_time =time.time()
-        inputs = tokenizer.encode("summarize: " + article[current_index:current_index+token_n_per_iter], return_tensors="pt", max_length=400,truncation=True)
+        inputs = tokenizer.encode("summarize: " + article[current_index:current_index+token_n_per_iter], return_tensors="pt", max_length=512,truncation=True)
         outputs = model.generate(inputs,max_length=max_length_val,min_length=min_length_val,
             length_penalty=length_penalty_val,num_beams=7,early_stopping=True)
         outputs = tokenizer.decode(outputs[0])
@@ -88,10 +88,10 @@ def generate_notes(article,model, tokenizer,token_n_per_iter = 2000, max_length_
 
 
 if __name__=='__main__':
-    name= 'glove_converted'
+    name= 'recurrent_neural_network_based_language_model'
     data = load_dataset(name+ '.json')
     model, tokenizer= prepare_predictor(model_name ='TF5_cond')
-    generate_notes(data, model, tokenizer, token_n_per_iter=2000, max_length_val=280, min_length_val=120,
+    generate_notes(data, model, tokenizer, token_n_per_iter=2000, max_length_val=360, min_length_val=120,
                    length_penalty_val=2.0, return_tensors="pt", file_name=name)
     print(data)
 
