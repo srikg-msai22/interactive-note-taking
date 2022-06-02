@@ -38,9 +38,9 @@ def summarization(folder):
 
 
 if __name__ =='__main__':
-    with open('original_articles/P1/P1_S01.json', 'r') as f:
+    with open('original_articles/P3/P3_S03.json', 'r') as f:
         data = json.load(f)
-    folder = generate_folders('P1_edited')
+    folder = generate_folders('P3_edited')
     summarization(folder)
 
 

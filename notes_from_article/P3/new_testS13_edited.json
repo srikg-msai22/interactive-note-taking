@@ -1,0 +1,1 @@
+"<pad> we trained our models on one machine with 8 NVIDIA P100 GPUs. each training step took about 0.4 seconds. the big models were trained for 300,000 steps (3.5 days) we varied the learning rate over the course of training, according to the formula: -----------------------------------------------------------------------------------------------------------------------------</s>"
